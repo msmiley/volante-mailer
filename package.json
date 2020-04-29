@@ -1,0 +1,22 @@
+{
+  "name": "volante-mailer",
+  "version": "1.0.0",
+  "description": "volante bridge to nodemailer",
+  "author": "Mike Smiley <msmiley@alumni.rice.edu>",
+  "url": "https://github.com/msmiley/volante-mailer",
+  "repository": "msmiley/volante-mailer.git",
+  "license": "ISC",
+  "scripts": {
+    "test": "node ./index.js"
+  },
+  "dependencies": {
+    "nodemailer": "^6.4.6"
+  },
+  "devDependencies": {
+    "volante": "^3.0.0",
+    "volante-console": "^2.3.0"
+  },
+  "keywords": [
+    "volante"
+  ]
+}
