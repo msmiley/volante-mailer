@@ -45,7 +45,8 @@ module.exports = {
 	},
 	methods: {
 	  initializeTransporter() {
-			if (this.transport.host && this.transport.port && this.transport.auth) {
+			if (this.transport && this.transport.host && this.transport.port && this.transport.auth) {
+				this.$debug('initializing transporter');
 	      try {
 	      	this.transporter = nodemailer.createTransport(this.transport);
 	
@@ -60,7 +61,7 @@ module.exports = {
 		  		console.error('error initializing nodemailer transporter', e);
 		  	}
 			} else {
-				this.$warn('missing required nodemailer transport parameters, need {host, port, auth}');
+				this.$warn('missing required nodemailer transport parameters, need transport: {host, port, auth}');
 			}
 	  },
 	  sendMessage(msg, callback) {
