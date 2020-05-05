@@ -46,7 +46,7 @@ module.exports = {
 	methods: {
 	  initializeTransporter() {
 			if (this.transport && this.transport.host && this.transport.port && this.transport.auth) {
-				this.$debug('initializing transporter');
+				this.$debug('initializing transporter', this.transport);
 	      try {
 	      	this.transporter = nodemailer.createTransport(this.transport);
 	
